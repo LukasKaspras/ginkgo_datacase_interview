@@ -6,7 +6,11 @@ Specifically, a short exploration and modelling of sensor data in order to predi
 
 To create the data:
 
-Run make_dataset.py and make_features.py!
+Run make_dataset.py and make_features.py.
+
+To build and evaluate the model:
+
+Run train_model.py.
 
 Project Organization
 ------------
@@ -36,24 +40,25 @@ Project Organization
     │                         generated with `pip freeze > requirements.txt`
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    └── src                <- Source code for use in this project.
+        ├── __init__.py    <- Makes src a Python module
+        │
+        ├── data           <- Scripts to download or generate data
+        │   ├── make_dataset.py
+        │   └── pull_sensor_data.py
+        │
+        ├── features       <- Scripts to turn raw data into features for modeling
+        │   ├── make_features.py
+        │   ├── helper.py  <- Miscellanous functions
+        │   └── relabel_and_clean_nan.py 
+        │
+        ├── models         <- Scripts to train models and then use trained models to make
+        │   │                 predictions
+        │   └── train_model.py
+        │
+        └── visualization  <- Scripts to create exploratory and results oriented visualizations
+            └── visualize.py
+  
 
 
 --------
