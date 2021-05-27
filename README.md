@@ -4,11 +4,14 @@ ginkgo_datacase_interview
 Work related to the data case for my job interview at Ginkgo Analytics.
 Specifically, a short exploration and modelling of sensor data in order to predict and warn about upcoming device failures.
 
+To create the data:
+
+Run make_dataset.py and make_features.py!
+
 Project Organization
 ------------
 
     ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
     │   ├── external       <- Data from third party sources.
